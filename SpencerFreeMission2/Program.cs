@@ -6,10 +6,12 @@ using System.Threading.Tasks;
 
 namespace SpencerFreeMission2
 {
-    class Program
+    public class Program
     {
+        //Start
         static void Main(string[] args)
         {
+            Console.WriteLine("Hello World!");
         }
     }
 }
