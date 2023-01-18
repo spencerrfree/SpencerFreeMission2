@@ -28,9 +28,7 @@ namespace SpencerFreeMission2
             Console.WriteLine();
             Console.WriteLine("DICE ROLLING SIMULATION RESULTS");
             Console.WriteLine("Each '*' represents 1 % of the total number of rolls.");
-            
             myGame.PrintNumRolls(numRolls);
-
             Random rnd = new Random();
             int[] terms = new int[(int)(numRolls)];
             for (int i = 0; i < numRolls; i++)
