@@ -29,14 +29,19 @@ namespace SpencerFreeMission2
             myGame.PrintNumRolls(numRolls);
 
             Random rnd = new Random();
-
+            int[] terms = new int[(int)(numRolls)];
             for (int i = 0; i < numRolls; i++)
             {
                 int dice1 = rnd.Next(1, 7);
                 int dice2 = rnd.Next(1, 7);
                 int sum = dice1 + dice2;
-                Console.WriteLine(sum);
+                terms[i] = sum;
             }
+            foreach (int i in terms)
+            {
+                Console.WriteLine(i.ToString());
+            }
+            
             
         }
     }
