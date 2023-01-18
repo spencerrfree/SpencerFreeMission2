@@ -23,12 +23,18 @@ namespace SpencerFreeMission2
             Console.WriteLine("Welcome to the dice throwing simulator!");
             Console.WriteLine();
             Console.Write("How many dice rolls would you like to simulate ? ");
+
+            //Read In User Entry and Store it to a Variable
             str = Console.ReadLine();
             numRolls = Convert.ToDouble(str);
             Console.WriteLine();
             Console.WriteLine("DICE ROLLING SIMULATION RESULTS");
             Console.WriteLine("Each '*' represents 1 % of the total number of rolls.");
+
+            //Prints out the Number of Rolls provided by user
             myGame.PrintNumRolls(numRolls);
+
+            //Generate a random number between 1 and 6 and add them together as many times as the user requests. Store them to an array.
             Random rnd = new Random();
             int[] terms = new int[(int)(numRolls)];
             for (int i = 0; i < numRolls; i++)
@@ -38,6 +44,8 @@ namespace SpencerFreeMission2
                 int sum = dice1 + dice2;
                 terms[i] = sum;
             }
+
+            //Declare Variables for 2 through 12
             double Count2 = 0;
             double Percent2 = 0;
             double Count3 = 0;
@@ -60,6 +68,8 @@ namespace SpencerFreeMission2
             double Percent11 = 0;
             double Count12 = 0;
             double Percent12 = 0;
+
+            //Iterate through array of numbers to count how many of each number are in it
             foreach (int i in terms)
             {
                 if (i == 2)
@@ -107,6 +117,8 @@ namespace SpencerFreeMission2
                     Count12 += 1;
                 }
             }
+
+            //Calculate the percentage of each number and round it to the nearest whole number
             Percent2 = Count2 / numRolls * 100;
             Percent2 = Math.Round(Percent2, 0);
             Console.Write(" 2: ");
